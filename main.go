@@ -3,18 +3,23 @@ package main
 import (
 	"fmt"
 	"task/db"
+	"os"
 	"path/filepath"
 	"task/cmd"
-	//"github.com/spf13/cobra"
 	"github.com/mitchellh/go-homedir"
 )
 
 func main(){
 	home,_ := homedir.Dir()
 	dbPath := filepath.Join(home,"tasks.db")
-	err := db.Init(dbPath); if err!=nil{
-		panic(err)
-	}
+	throw(db.Init(dbPath))
 	fmt.Println("DB Conn")
-	cmd.RootCmd.Execute()
+	throw(cmd.RootCmd.Execute())
+}
+
+func throw(err error){
+	if err!=nil{
+		fmt.Println(err)
+		os.Exit(1)
+	}
 }

@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"task/db"
 	"fmt"
 	"strconv"
 	"github.com/spf13/cobra"
@@ -18,7 +19,24 @@ var do = &cobra.Command{
 				ids = append(ids,id)
 			}
 		}
-		fmt.Println(ids)
+
+		tasks,err := db.AllTasks(); if err!=nil{
+			fmt.Println("Something went Wrong : ",err)
+		}
+		
+		for _, id := range(ids){
+			if id < 0 || id >= len(tasks){
+				fmt.Printf("Invalid Number : %d",id)
+				continue
+			} 
+
+			task := tasks[id-1]
+
+			err := db.DeleteTask(task.Key); if err!= nil{
+				fmt.Println("Could Not mark Task as Complete : ",err)
+			}
+			fmt.Printf("Marked Task \"%s\" as Complete.",task.Value)
+		}
 
 	},
 }
