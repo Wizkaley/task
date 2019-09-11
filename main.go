@@ -13,7 +13,7 @@ func main(){
 	home,_ := homedir.Dir()
 	dbPath := filepath.Join(home,"tasks.db")
 	throw(db.Init(dbPath))
-	fmt.Println("DB Conn")
+	//fmt.Println("DB Conn")
 	throw(cmd.RootCmd.Execute())
 }
 

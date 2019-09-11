@@ -1,7 +1,7 @@
 package db
 
 import (
-	"fmt"
+	
 	"github.com/boltdb/bolt"
 	"encoding/binary"
 	"time"
@@ -19,7 +19,7 @@ type Task struct{
 
 //Init ialize Datbase ...
 func Init(dbPath string)(error){
-	fmt.Println(dbPath)
+	//fmt.Println(dbPath)
 	var err error
 	db, err = bolt.Open(dbPath,0600,&bolt.Options{Timeout: 1 * time.Second}); if err!=nil{
 		return err
