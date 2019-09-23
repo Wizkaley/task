@@ -1,29 +1,36 @@
 package cmd
 
-import(
-	"github.com/spf13/cobra"
+import (
 	"fmt"
-	"strings"	
+	"strings"
 	"task/db"
+
+	"github.com/spf13/cobra"
 )
 
+var createTask = db.CreateTask
+
 var addCmd = &cobra.Command{
-	Use: "add",
+	Use:   "add",
 	Short: "Adds a Task to the To-Do List",
-	Run: func(cmd *cobra.Command, args [] string){
+	Run: func(cmd *cobra.Command, args []string) {
 		// fmt.Println("Add Called")
-		task := strings.Join(args," ")
-		_,err := db.CreateTask(task)
-		if err!= nil{
-			fmt.Println("Something Went Wrong while Creating Task : ",err)
+		if len(args) == 0 {
+			fmt.Println("No argument provided with task")
 			return
 		}
-		fmt.Printf("Added \"%s\" to your To-Do List.",task)
+
+		task := strings.Join(args, " ")
+		_, err := createTask(task)
+		if err != nil {
+			fmt.Println("Something Went Wrong while Creating Task : ", err)
+			return
+		}
+		fmt.Printf("Added \"%s\" to your To-Do List.", task)
 	},
 }
 
-
 // Init ...
-func init(){
+func init() {
 	RootCmd.AddCommand(addCmd)
 }

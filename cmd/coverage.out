@@ -1,0 +1,27 @@
+mode: set
+task/cmd/add.go:16.47,18.21 1 1
+task/cmd/add.go:23.3,25.17 3 1
+task/cmd/add.go:29.3,29.55 1 1
+task/cmd/add.go:18.21,21.4 2 1
+task/cmd/add.go:25.17,28.4 2 1
+task/cmd/add.go:34.13,36.2 1 1
+task/cmd/do.go:19.47,22.29 2 1
+task/cmd/do.go:32.3,33.17 2 1
+task/cmd/do.go:37.3,37.26 1 1
+task/cmd/do.go:22.29,25.18 2 1
+task/cmd/do.go:25.18,27.5 1 1
+task/cmd/do.go:27.10,29.5 1 1
+task/cmd/do.go:33.17,35.4 1 1
+task/cmd/do.go:37.26,41.34 1 1
+task/cmd/do.go:46.4,49.18 3 1
+task/cmd/do.go:52.4,52.61 1 1
+task/cmd/do.go:41.34,43.13 2 1
+task/cmd/do.go:49.18,51.5 1 1
+task/cmd/do.go:58.13,60.2 1 1
+task/cmd/list.go:12.47,16.17 2 1
+task/cmd/list.go:20.3,20.22 1 1
+task/cmd/list.go:23.3,23.27 1 1
+task/cmd/list.go:16.17,18.4 1 1
+task/cmd/list.go:20.22,22.4 1 1
+task/cmd/list.go:23.27,25.4 1 1
+task/cmd/list.go:29.13,31.2 1 1

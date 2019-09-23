@@ -1,0 +1,23 @@
+mode: set
+task/db/tasks.go:23.44,27.16 3 1
+task/db/tasks.go:31.2,31.47 1 1
+task/db/tasks.go:27.16,29.3 1 1
+task/db/tasks.go:31.47,34.3 2 1
+task/db/tasks.go:38.42,41.43 2 1
+task/db/tasks.go:54.2,54.16 1 1
+task/db/tasks.go:57.2,57.16 1 1
+task/db/tasks.go:41.43,44.15 2 1
+task/db/tasks.go:47.3,50.33 4 1
+task/db/tasks.go:44.15,46.4 1 1
+task/db/tasks.go:54.16,56.3 1 1
+task/db/tasks.go:61.33,64.41 2 1
+task/db/tasks.go:77.2,77.19 1 1
+task/db/tasks.go:64.41,68.52 3 1
+task/db/tasks.go:74.3,74.13 1 1
+task/db/tasks.go:68.52,73.4 1 1
+task/db/tasks.go:81.30,82.43 1 1
+task/db/tasks.go:82.43,84.15 2 1
+task/db/tasks.go:87.3,87.27 1 1
+task/db/tasks.go:84.15,86.4 1 1
+task/db/tasks.go:91.29,95.2 3 1
+task/db/tasks.go:97.25,99.2 1 1
