@@ -9,6 +9,8 @@ import (
 	"task/db"
 	"testing"
 
+	"github.ibm.com/dash/dash_utils/dashtest"
+
 	"github.com/mitchellh/go-homedir"
 	"github.com/stretchr/testify/assert"
 )
@@ -86,4 +88,8 @@ func TestAddCmd(t *testing.T) {
 	os.Stdout = oldStdout
 	f.Close()
 	dbc.Close()
+}
+
+func TestMain(m *testing.M) {
+	dashtest.ControlCoverage(m)
 }
